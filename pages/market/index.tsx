@@ -1,5 +1,5 @@
 import React from 'react'
-import CurrencyCard from '../component/CurrencyCard';
+// import CurrencyCard from '../component/CurrencyCard';
 import SelecterCard from '../component/SelecterCard';
 interface Props {
   query : string;
@@ -21,7 +21,7 @@ const Trade = ({query}: Props) => {
             ))
           }
         </div>
-        <CurrencyCard isShow={query}/>
+        {/* <CurrencyCard isShow={query}/> */}
       </div>
     </section>
   )
