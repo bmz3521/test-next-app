@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Avatar, Card } from "antd";
-import { getPrice } from '../store/price/saga';
+// import { getPrice } from '../store/price/saga';
 
 interface Props {
   isShow : string;
@@ -44,8 +44,8 @@ const CurrencyCard = ({isShow}: Props) => {
 
 
   const initialFunc = async () => {
-    const data = await getPrice({symbol : isShow});
-    setCoinData(data)
+    // const data = await getPrice({symbol : isShow});
+    // setCoinData(data)
     setLoading(false) 
   };
   return (

@@ -7,4 +7,4 @@ export const getPrice = async (params:{ symbol:string }) => {
         // console.log('data ===',data)
         
         return data
-    }
+}
