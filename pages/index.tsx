@@ -14,5 +14,5 @@ export default function Home() {
             history.push("/market");
         }
     },[])
-  return <Trade />
+  return <Trade query=''/>
 }
