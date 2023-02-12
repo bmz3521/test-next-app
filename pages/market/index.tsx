@@ -2,7 +2,7 @@ import React from 'react'
 import {
   CurrencyCard,
   SelecterCard
-} from '../midcontent/index';
+} from '../../midcontent/index';
 interface Props {
   query : string;
 }
