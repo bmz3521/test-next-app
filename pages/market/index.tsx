@@ -1,4 +1,6 @@
 import React from 'react'
+import CurrencyCard from './component/currencyCard';
+import SelecterCard from './component/selecterCard';
 interface Props {
   query : string;
 }
@@ -13,8 +15,13 @@ const Trade = ({query}: Props) => {
     <section className="container-trade">
       <div className='market'>
         <div className='selecter-container'>
-          HELLO
+          {
+            currency.map((item)=>(
+              <SelecterCard key={item.id} item={item} active={query}/>
+            ))
+          }
         </div>
+        <CurrencyCard isShow={query}/>
       </div>
     </section>
   )
