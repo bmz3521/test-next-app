@@ -17,7 +17,7 @@ const Trade = ({query}: Props) => {
         <div className='selecter-container'>
           {
             currency.map((item)=>(
-              <SelecterCard key={item.id} item={item} active={query}/>
+              <>{item.name}</>
             ))
           }
         </div>
