@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Avatar, Card } from "antd";
-import { getPrice } from '../../store/price/saga';
+import axios from 'axios';
 
 interface Props {
   isShow : string;
@@ -27,7 +27,7 @@ let dollarUS:any = Intl.NumberFormat('en-US');
 const CurrencyCard = ({isShow}: Props) => {
   const [loading, setLoading] = useState(true);
   const [coinData, setCoinData] = useState<any>(null);
-
+  
   useEffect(()=> {
     setLoading(true)
     initialFunc();
@@ -38,10 +38,18 @@ const CurrencyCard = ({isShow}: Props) => {
       setLoading(true)
       initialFunc();
     }, 5000);
-
+    
     return () => clearInterval(interval);
   },[isShow])
-
+  
+ const getPrice = async (params:{ symbol:string }) => {
+  const { data } = await axios.get(
+      `https://satangcorp.com/api/v3/ticker/24hr?symbol=${params.symbol || 'btc_thb'}`,
+      );
+      // console.log('data ===',data)
+      
+      return data
+  }
 
   const initialFunc = async () => {
     const data = await getPrice({symbol : isShow});
