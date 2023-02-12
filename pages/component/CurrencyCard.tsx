@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Avatar, Card } from "antd";
 import { getPrice } from '../store/price/saga';
-import { connect } from 'react-redux';
 
 interface Props {
   isShow : string;
@@ -64,8 +63,5 @@ const CurrencyCard = ({isShow}: Props) => {
   );
 };
 
-const mapDispatchToProps = (dispatch:any) => ({
-  getPrice:( params:any ) => dispatch(getPrice(params))
-})
 
-export default connect(null, mapDispatchToProps)(CurrencyCard);
+export default CurrencyCard
