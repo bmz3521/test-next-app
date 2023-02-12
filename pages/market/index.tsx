@@ -1,6 +1,8 @@
 import React from 'react'
-import CurrencyCard from './component/currencyCard';
-import SelecterCard from './component/selecterCard';
+import {
+  CurrencyCard,
+  SelecterCard
+} from './component/index';
 interface Props {
   query : string;
 }
