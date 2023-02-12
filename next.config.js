@@ -11,7 +11,7 @@ const nextConfig = {
     return [
       {
         source: '/',
-        destination: process.env.REACT_APP_BASE_REDIRECT_PATH,
+        destination: '/market',
         permanent: true,
       },
     ]

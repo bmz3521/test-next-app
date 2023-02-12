@@ -14,14 +14,14 @@ const Trade = ({query}: Props) => {
   return (
     <section className="container-trade">
       <div className='market'>
-        <div className='selecter-container'>
-          {/* {
+       {/* <div className='selecter-container'>
+           {
             currency.map((item)=>(
               <SelecterCard key={item.id} item={item} active={query}/>
             ))
-          } */}
+          }
         </div>
-        {/* <CurrencyCard isShow={query}/> */}
+        <CurrencyCard isShow={query}/> */}
       </div>
     </section>
   )
